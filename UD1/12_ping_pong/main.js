@@ -1,8 +1,20 @@
 function pingPong() {
-
+    for (let i = 1; i <= 100; i++) {
+        if (i % 10 === 0) {
+            console.log('Pong');
+        }
+        else if (i % 5 === 0) {
+            console.log('Ping');
+        }
+        else {
+            console.log(i);
+        }
+    }
 }
+pingPong();
 
-pingPong()
+
+
 // expected output
 // 1
 // 2

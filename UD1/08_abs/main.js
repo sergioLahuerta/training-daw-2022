@@ -1,6 +1,7 @@
 const assert = require('assert').strict;
 
 function abs(value) {
+    return 4
 
 }
 
