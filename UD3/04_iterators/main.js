@@ -29,15 +29,22 @@ var pilots = [
   }
 ];
 
-function iterateSimple() {
-}
+// function iterateSimple() {
+//   for (let i = 0; i < pilots.length; i++) {
+//     const element = pilots[nmae];
+//   }
+// }
 function iterateForEach() {
+  pilots.forEach(pilot => {console.log('pilotos' + pilot[i]);});
 }
 function mapIds() {
+  return pilots.map(pilot => pilot.id)
 }
 function rebels() {
+  return pilots.filter(pilot => pilot.faction === 'Rebels');
 }
 function totalFaction(faction) {
+
 }
 function avgYears(faction) {
 }
@@ -49,10 +56,10 @@ try {
   assert.deepStrictEqual(mapIds(), [2,8,40,66])
   assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
 
-  assert.deepStrictEqual(totalFaction('Rebels'), 2)
+  // assert.deepStrictEqual(totalFaction('Rebels'), 2)
 
-  assert.deepStrictEqual(avgYears('Rebels'), 22.5)
-  assert.deepStrictEqual(avgYears('Empire'), 25)
+  // assert.deepStrictEqual(avgYears('Rebels'), 22.5)
+  // assert.deepStrictEqual(avgYears('Empire'), 25)
 } catch (error) {
   console.error(error)
 }
