@@ -26,7 +26,7 @@ window.onload = function(e) {
 
     //Seleccionar todos lo buttons dentro de class == buttons
     const tosLosButtons = document.querySelectorAll('.buttons button')
-    console.log(tosLosButtons)
+    console.log("Todos los botones: ", tosLosButtons)
 
     //Cambiar el color de fondo del primer párrafo
     const cogerTosLosP = document.getElementsByTagName('p')
@@ -36,6 +36,11 @@ window.onload = function(e) {
     }
 
     //Cambiar el color de los elementos buttons dentro de class == buttons
-    
+    //Seleccionar todos lo buttons dentro de class == buttons
+    const tosLosButtons2 = document.querySelectorAll('.buttons button')
+    console.log('Todos los Botones 2', tosLosButtons2)
+    tosLosButtons2.forEach(element => {
+        element.style.color = 'red'
+    });
 
 }
