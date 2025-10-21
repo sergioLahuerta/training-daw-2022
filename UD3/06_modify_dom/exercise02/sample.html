@@ -5,13 +5,36 @@
 <script type="text/javascript">
 window.onload = function() {
 	// Numero de enlaces de la pagina
-
+	let numEnlacesPagina = document.getElementsByTagName('a')
+	console.log('Numero de enlaces en la web: ', numEnlacesPagina.length);
+	
 	// Direccion del penultimo enlace
+	let enlacesPagina = document.getElementsByTagName('a')
+	let penultimoEnlace = enlacesPagina[enlacesPagina.length - 2]
+	console.log('Penúltimo enlace de la web: ', penultimoEnlace)
 
 	// Numero de enlaces que apuntan a http://prueba
+	let enlacesPaginaPrueba = document.getElementsByTagName('a')
+	let contadorEnlaces = 0
+	for (const enlace of enlacesPaginaPrueba) {
+		if(enlace.href.includes('http://prueba')){ 
+			contadorEnlaces++
+		}
+	}
+	console.log('Enlaces que apuntan a http://prueba ->', contadorEnlaces)
 
 	// Numero de enlaces del tercer párrafo
+	let tosLosPes = document.getElementsByTagName('P')
+	let tercerPe = tosLosPes[2]
+	let enlacesTercerPe = tercerPe.getElementsByTagName('a').length
+	console.log('Enlaces en el tercer p: ', enlacesTercerPe)
 
+	//Crear un nodo <div>, con un nodo <p> dentro y añadirlo al documento
+	let nuevoDiv = document.createElement('div')
+	let pDentroDelDiv = document.createElement('p')
+	
+	document.body.appendChild(nuevoDiv)
+	nuevoDiv.appendChild(pDentroDelDiv)
 }
 </script>
 </head>
