@@ -42,5 +42,4 @@ window.onload = function(e) {
     tosLosButtons2.forEach(element => {
         element.style.color = 'red'
     });
-
 }
