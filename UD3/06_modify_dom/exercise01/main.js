@@ -3,6 +3,7 @@ window.onload = function(e) {
 
     // document.getElementsByTagName('h1')[0].innerText = 'Changed from JS!!'
 
+    // Cambiar contenido del segundo h2
     const cogerTosLosh2 = document.getElementsByTagName('h2')
     for (let index = 1; index < 2; index++) {
         const segundoH2 = cogerTosLosh2[index]
@@ -11,7 +12,7 @@ window.onload = function(e) {
 
     //Seleccionar el elemento con id == username
     const elementIdUsername = document.getElementById('username')
-    console.log(elementIdUsername)
+    console.log('Elemento con id = username: ', elementIdUsername)
 
     //Cambiar el color de todos los .first que estén dentro de un artículo
     const tosLosFirst = document.querySelectorAll('article .first')
@@ -22,7 +23,7 @@ window.onload = function(e) {
 
     //Seleccionar todos lo elementos li con class == item
     const tosLosli = document.querySelectorAll('li.item')
-    console.log(tosLosli)
+    console.log('li con .item: ', tosLosli)
 
     //Seleccionar todos lo buttons dentro de class == buttons
     const tosLosButtons = document.querySelectorAll('.buttons button')
