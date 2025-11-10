@@ -7,9 +7,47 @@ window.onload = function() {
     document.getElementById('pregunta_si').onchange = changeValue
     document.getElementById('pregunta_no').onchange = changeValue
 
+    document.getElementById('condiciones').onchange = checkSubmit
+    document.getElementById('privacidad').onchange = checkSubmit
+
+    document.getElementById('pregunta_si').onchange = checkCombo
+    document.getElementById('pregunta_no').onchange = checkCombo
+    document.getElementById('pregunta_nsnc').onchange = checkCombo
     
+    checkSubmit()
+    checkCombo()
+
+    function checkSubmit() {
+        const botonEnviar = document.getElementById('submit')
+        botonEnviar.disabled = true
+        
+        if(document.getElementById('condiciones').checked && 
+        document.getElementById('privacidad').checked) {
+            botonEnviar.disabled = false
+        }  else {
+            botonEnviar.disabled = true
+            alert('No puedes enviarlo sin marcar los dos checkbox')
+        }
+    }
+
+    function checkCombo() {
+        const combo = document.getElementById('opciones')
+        const preguntaSi = document.getElementById('pregunta_si').checked
+        combo.disabled = true
+        if(preguntaSi) {combo.disabled = false}        
+    }
+
+    function changeValue(e) {
+        console.log('changed' + e.target.value)
+   }
 }
 
-function changeValue(e) {
-     console.log('changed' + e.target.value)
-}
+// El botón enviar sólo debe estar habilitado si se han marcado los 2 checks
+
+
+
+// El combo de opciones sólo estará habilitado si se pulsa “si” en el primer check
+
+// Nombre y apellidos son obligatorios. Si no se han rellenado al pulsar el botón, informar al usuario
+// El tamaño máximo de la descripción es de 80 carácteres
+// Implementar algún mecanismo para prevenir el doble submit

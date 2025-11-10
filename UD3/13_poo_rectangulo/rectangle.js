@@ -19,8 +19,7 @@ class Rectangle {
     // .|......x---|----x
     // .x------|---x....|
     // ........x--------x
-    // Se superponen si alguna de sus coordenadas están dentro de los límites
-    // del otro rectángulo
+    // Se superponen si alguna de sus coordenadas están dentro de los límites del otro rectángulo
 }
 
 let r1 = new Rectangle(5,9);
@@ -29,7 +28,18 @@ let r2 = new Rectangle(3,4);
 r1.print()
 r2.print()
 
-// let area = r1.area();
-// console.log(`area ${area}`)
+let area = r1.area();
+console.log(`area ${area}`)
 
-// let isOverlay = r1.overlay(r2)
+function overlay(r) {
+    let r1 = new Rectangle(5,9);
+    let r2 = new Rectangle(3,4);
+    
+    if(r1.contains(r2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let isOverlay = r1.overlay(r2)
